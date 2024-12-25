@@ -1,0 +1,14 @@
+.vertical-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo{
+      height: 44px;
+  width: 44px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-radius: 20%;
+}
+.pad{
+  padding-bottom: 10px;
+}

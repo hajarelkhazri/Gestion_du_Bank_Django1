@@ -1,0 +1,23 @@
+.center-content{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  
+}
+.couleur{
+  color: rgb(28, 52, 171);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+}
+body{
+  background-color: rgb(161, 184, 228);
+}
+i{
+  color: beige;
+}
+footer{
+  background-color: rgb(211, 212, 220);
+}

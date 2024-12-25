@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>| Virements</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body style="background-color: rgb(161, 184, 228);">
+ 
+    {%block content%}
+  
+    <style>
+      :root {
+        --common-color: #3498db; /* Define your common color here */
+      }
+      .navbar-custom {
+        background-color: var(--common-color); /* Apply common color to background */
+        border: none; /* Remove border */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow */
+        margin-bottom: 0; /* Remove bottom margin */
+      }
+  
+      .navbar-custom .navbar-header p {
+        color: #ffffff; /* White text for ELKHZRI_Bank */
+        font-size: 20px; /* Font size for ELKHZRI_Bank */
+        font-weight: bold; /* Bold text for ELKHZRI_Bank */
+        margin-right: 200px;
+        margin-top:13px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+      }
+  
+      .navbar-custom .navbar-nav > li > a {
+        color: #d4d4d4; /* Light gray text for links */
+        font-size: 16px; /* Font size for links */
+        transition: color 0.3s; /* Smooth color transition */
+      }
+  
+      .navbar-custom .navbar-nav > li > a:hover {
+        color: black; /* White text on hover */
+        background-color: transparent;
+      }
+  
+      .navbar-custom .navbar-nav > .active > a {
+        color: #ffffff; /* White text for active link */
+        background-color: transparent; /* Transparent background for active link */
+      }
+  
+      .navbar-custom .navbar-nav .navbar-right > li > a {
+        color: #d4d4d4; /* Light gray text for right-aligned links */
+        transition: color 0.4s; /* Smooth color transition */
+        
+      }
+  
+      .navbar-custom .navbar-nav .navbar-right > li > a:hover {
+        color: #ffffff; /* White text on hover */
+        background-color: transparent;
+        
+      }
+      form{
+        margin-left:10px;
+      }
+      
+
+    </style> 
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <p>ELKHAZRI_BANK<span style="color:black; font-size:22px;">.</span></p>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'acceuil' %}">Acceuil</a></li>
+          <li><a href="{% url 'Comptes' %}">Comptes</a></li>
+          <li class="active"><a href="#">Virements</a></li>
+          <li><a href="{% url 'mesinfo' %}">Mes informations</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href={% url 'logout' %}><span class="glyphicon glyphicon-log-out"></span> Se Déconnecter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+    
+    <form method="POST" action="{% url 'Virements' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+   
+     
+    <button type="submit" class="btn btn-primary">Valider</button>
+  </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="container-fluid text-center">
+      <h3 style="margin-bottom: 30px;">Suivez-nous sur:</h3>
+      <i class="fa fa-facebook-square" style="font-size:36px"></i>
+      <i class="fa fa-twitter" style="font-size:36px"></i>
+      <i class="fa fa-youtube-play" style="font-size:36px"></i>
+      <i class="fa fa-linkedin-square" style="font-size:36px"></i> 
+      
+      
+    </footer>
+    {%endblock%}
+</body>
+</html>

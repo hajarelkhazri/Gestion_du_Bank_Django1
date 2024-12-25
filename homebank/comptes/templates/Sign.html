@@ -1,0 +1,109 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| s'inscrire</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: rgb(161, 184, 228);">
+  {%block content%}
+  <style>
+    :root {
+      --common-color: #3498db; /* Define your common color here */
+    }
+    .navbar-custom {
+      background-color: var(--common-color); /* Apply common color to background */
+      border: none; /* Remove border */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow */
+      margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .navbar-custom .navbar-header p {
+      color: #ffffff; /* White text for ELKHZRI_Bank */
+      font-size: 20px; /* Font size for ELKHZRI_Bank */
+      font-weight: bold; /* Bold text for ELKHZRI_Bank */
+      margin-right: 200px;
+      margin-top:13px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+    }
+
+    .navbar-custom  > li > a {
+      color: #d4d4d4; /* Light gray text for links */
+      font-size: 16px; /* Font size for links */
+      transition: color 0.3s; /* Smooth color transition */
+    }
+
+    .navbar-custom  > li > a:hover {
+      color: black; /* White text on hover */
+      background-color: transparent;
+    }
+
+    .navbar-custom  > .active > a {
+      color: #ffffff; /* White text for active link */
+      background-color: transparent; /* Transparent background for active link */
+    }
+
+    .navbar-custom  > li > a {
+      color: #d4d4d4; /* Light gray text for right-aligned links */
+      transition: color 0.4s; /* Smooth color transition */
+      
+    }
+
+    .navbar-custom  > li > a:hover {
+      color: #ffffff; /* White text on hover */
+      background-color: transparent;
+      
+    }
+    form{
+      margin-left:10px;
+    }
+    
+
+  </style> 
+  
+    <nav class="navbar navbar-custom" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <p>ELKHAZRI_BANK<span style="color:black; font-size:22px;">.</span></p>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1></h1>
+        <form action="{% url 'Sign' %}"  method="POST" >
+          {% csrf_token %}
+           {{form}}
+         
+      <button type="submit" class="btn btn-primary" >Enregistrer</button>
+        </form>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <footer class="container-fluid bg-4 text-center">
+        <h4>Suivez-nous sur:</h4>
+        <i class="fa fa-facebook-square" style="font-size:36px"></i>
+        <i class="fa fa-twitter" style="font-size:36px"></i>
+        <i class="fa fa-youtube-play" style="font-size:36px"></i>
+        
+        <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+      </footer>
+      {%endblock%}
+      
+</body>
+</html>

@@ -1,0 +1,36 @@
+.logo{
+    height: 44px;
+width: 44px;
+margin-top: 6px;
+margin-bottom: 6px;
+border-radius: 20%;
+}
+.style {
+margin: 30px; 
+}
+
+
+h2 {
+color: #333; }
+
+
+input {
+width: 100%; /* Largeur à 100% */
+padding: 10px; /* Espacement interne */
+margin-top: 5px; /* Espacement en haut */
+border: 1px solid #ccc; /* Bordure grise */
+border-radius: 5px; /* Coins arrondis */
+box-sizing: border-box; /* Inclut la bordure dans la largeur/hauteur totale */
+}
+
+/* Style pour les options de datalist */
+option {
+padding: 5px; /* Espacement interne */
+}
+input[type="number"] {
+  width: 100%;
+  padding: 10px; 
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;}
